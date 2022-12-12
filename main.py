@@ -7,10 +7,12 @@ with open(r'C:\Users\alorenz\PycharmProjects\gCodeParser\100prozentcube.gcode', 
 parsed_gcode = GcodeParser(gcode)
 parsed_gcode.lines   # get parsed gcode lines
 for line in parsed_gcode.lines:
-  switch=True
-  def toggle(switch):
-    switch=not switch
+
   zstat=line.params.get('Z')
   if zstat != None:
-    toggle()
-    print(switch)
+    offset=1
+  else:
+    offset=0
+ 
+
+  print(offset)
