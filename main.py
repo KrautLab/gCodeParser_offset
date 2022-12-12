@@ -6,13 +6,16 @@ with open(r'C:\Users\alorenz\PycharmProjects\gCodeParser\100prozentcube.gcode', 
 
 parsed_gcode = GcodeParser(gcode)
 parsed_gcode.lines   # get parsed gcode lines
+offset=False
 for line in parsed_gcode.lines:
 
-  zstat=line.params.get('Z')
-  if zstat != None:
-    offset=1
+  if line.params.get('Z') != None:
+    switch=1
   else:
-    offset=0
- 
+    switch=0
+
+  if switch==1:
+    offset = not offset
 
   print(offset)
+
