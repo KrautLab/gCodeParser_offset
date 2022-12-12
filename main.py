@@ -10,6 +10,7 @@ for line in parsed_gcode.lines:
   switch=True
   def toggle(switch):
     switch=not switch
-  if line.params[-1] == 'Z':
+  zstat=line.params.get('Z')
+  if zstat != None:
     toggle()
     print(switch)
