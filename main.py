@@ -1,7 +1,8 @@
 from gcodeparser import GcodeParser
+# user inputs
 nozzle_size=0.4
 # open gcode file and store contents as variable
-with open(r'C:\Users\alorenz\PycharmProjects\gCodeParser\100prozentcube.gcode', 'r') as f:
+with open(r'C:\Users\name\projects\example.gcode', 'r') as f:
   gcode = f.read()
 
 parsed_gcode = GcodeParser(gcode)
