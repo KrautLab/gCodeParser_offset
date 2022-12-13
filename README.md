@@ -10,6 +10,6 @@ If this proves to be useful, it should be communicated as an issue for commonly 
 
 ## Instructions
 
-Paste filepath instead of example filepath in line 4, change nozzle size in line 2 according to the one you are using.
+Paste filepath instead of example filepath in line 5, change nozzle size in line 3 according to the one you are using.
 
 Paste output in editor, save as .gcode
